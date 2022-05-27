@@ -29,6 +29,8 @@ int main(){
 
     cout << my_string << endl;
 
+    cout << my_string.length() << endl;
+
     return 0;
 
 }
