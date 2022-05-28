@@ -24,12 +24,12 @@ int main(){
     my_string = "Hello 'world'";
 
     cout << my_string << endl;
-
+ 
     my_string = "Hello \"World\"";
 
     cout << my_string << endl;
 
-    cout << my_string.length() << endl;
+    cout << my_string.substr(0,3) << endl;
 
     return 0;
 
