@@ -9,11 +9,13 @@ int main(){
 
     cout << hah << endl;
 
-    my_string = "this is his string";
+    my_string.insert(5,"hah");
 
-    hah = my_string.find_last_of("his");
+    cout << my_string << endl;
 
-    cout << hah <<endl;
+    my_string.push_back('d');
+
+    cout << my_string << endl;
 
     return 0;
 }
