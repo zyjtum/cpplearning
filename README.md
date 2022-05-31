@@ -8,3 +8,5 @@ This small project contains four parts:
 4. File
 
 Each part consists of basic knowledge and common function or methods
+
+More content will be added
