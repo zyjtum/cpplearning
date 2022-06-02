@@ -16,6 +16,15 @@ int main(){
 
     cout << (string1 != string2) << endl;
 
+    /*
+    compare the lexicographical order
+    Lexicographically speaking, 
+    empty strings always come first, 
+    followed by numbers, 
+    then uppercase letters, 
+    and finally lowercase letters.
+      */
+
     string1 = "apple";
     string2 = "cat";
 
@@ -28,6 +37,12 @@ int main(){
     else {
         cout << "the strings are equal" << endl;
     }
+
+    char star ='d';
+    cout << isupper(star) << " " << islower(star) <<endl;
+    //note if isupper/islower returns integer if true
+    //but maybe not 1
+
 
     return 0;
 }
