@@ -5,23 +5,17 @@ using namespace std;
 
 int main(){
     string path = "student/text/readpractice.txt";
-
     try{
         ifstream file;
-        string read;
         file.open(path);
-
-        if (!file) {
-            throw runtime_error("File failed to open.");
-        }
-        while(getline(file, read)){
-            cout << read << endl;
+        if(!file){
+            throw runtime_error("File failed to open");
         }
         file.close();
-        cerr << "File successfully opened and closed." << endl;
+        cout << file.rdbuf();
+        // file.close();  if switch the order, nothing printed
     }
-
-    catch (exception& e){
+    catch(exception & e){
         cerr << e.what() << endl;
     }
 
