@@ -28,8 +28,11 @@ file.get(read_char)\
 when file opended, it is stroed in buffer, read from buffer directly:\
 ifstream_obj.rdbuf()
 
-### Delimiters
 getline(ifstream_obj, read_string, delimiters) \
 by default the delimiter is '\n'
+
+fstream_obj.ignore(index) goes to the index char and start from there
+
+### Write to file
 
 More content will be add
