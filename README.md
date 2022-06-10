@@ -9,7 +9,7 @@ This small project contains four parts:
 Each part consists of basic knowledge and common function or methods
 
 ## Part 1. Array and Vector
-1. Create array \
+1. Create array\
 data_type name [length]\
 data_type name [] = {elements}
 
