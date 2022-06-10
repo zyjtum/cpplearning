@@ -21,7 +21,7 @@ advanced for loop
 ## Part 3. File
 ### Read file
 
-data type : ifstream (include in std::fstream)\
+use data type : ifstream (include in std::fstream)\
 ifstream_obj.open(path_string)\
 getline(ifstream_obj, read_string)\
 file.get(read_char)\
@@ -34,5 +34,7 @@ by default the delimiter is '\n'
 fstream_obj.ignore(index) goes to the index char and start from there
 
 ### Write to file
+
+use data type ostream
 
 More content will be add
