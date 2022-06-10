@@ -16,15 +16,15 @@ data_type name [] = {elements}
 2. Iterate an array:\
 for loop\
 while loop\
-advanced for loop\
+advanced for loop
 
 ## Part 3. File
 ### Read file
 
 data type : ifstream (include in std::fstream)\
-ifstream_obj.open(path_string)\ 
-getline(ifstream_obj, read_string)\ 
-file.get(read_char)\ 
+ifstream_obj.open(path_string)\
+getline(ifstream_obj, read_string)\
+file.get(read_char)\
 when file opended, it is stroed in buffer, read from buffer directly:\
 ifstream_obj.rdbuf()
 
