@@ -2,16 +2,15 @@
 My cpp learning project
 
 This small project contains four parts:
-1. Array
-2. Vector
-3. String
-4. File
+1. Array and Vector
+2. String
+3. File
 
 Each part consists of basic knowledge and common function or methods
 
-## Part 1. Array
-1. Create array
-data_type name [length]
+## Part 1. Array and Vector
+1. Create array \
+data_type name [length]\
 data_type name [] = {elements}
 
 2. Iterate an array
@@ -19,14 +18,18 @@ for loop
 while loop
 advanced for loop
 
-## Part 4. File
+## Part 3. File
 ### Read file
 
-data type : ifstream (include in std::fstream)
-ifstream_obj.open(path_string)
-getline(ifstream_obj, read_string)
-file.get(read_char)
-when file opended, it is stroed in buffer
+data type : ifstream (include in std::fstream) \
+ifstream_obj.open(path_string) \ 
+getline(ifstream_obj, read_string) \ 
+file.get(read_char) \ 
+when file opended, it is stroed in buffer, read from buffer directly: \
 ifstream_obj.rdbuf()
+
+### Delimiters
+getline(ifstream_obj, read_string, delimiters) \
+by default the delimiter is '\n'
 
 More content will be add
