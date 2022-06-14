@@ -3,13 +3,14 @@
 
 using namespace std;
 
-void writingtofile(void);
+void writemultiline(void);
 void readwrittenfile(void);
 
 int main(){
 
     //writingtofile();
-    readwrittenfile();
+    //readwrittenfile();
+    writemultiline();
 
     return 0;
 
@@ -34,6 +35,13 @@ void writemultiline(){
         file.close();
         cerr << "Finished writing to file"<< endl;
 
+        ifstream stream;
+        stream.open(path);
+        string read;
+
+        while(getline(stream, read)){
+            cout << read << endl;
+        }
         
     }
     catch (exception & e){
