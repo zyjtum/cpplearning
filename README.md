@@ -24,7 +24,7 @@ advanced for loop
 use data type : ifstream (include in std::fstream)\
 ifstream_obj.open(path_string)\
 getline(ifstream_obj, read_string)\
-file.get(read_char)\
+ifstream_obj.get(read_char)\
 when file opended, it is stroed in buffer, read from buffer directly:\
 ifstream_obj.rdbuf()
 
@@ -36,5 +36,8 @@ fstream_obj.ignore(index) goes to the index char and start from there
 ### Write to file
 
 use data type ostream
+
+ostream_obj.open(path_string)
+ostream << content_string
 
 More content will be add
