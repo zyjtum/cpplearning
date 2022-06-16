@@ -37,7 +37,14 @@ fstream_obj.ignore(index) goes to the index char and start from there
 
 use data type ostream
 
-ostream_obj.open(path_string)
+ostream_obj.open(path_string, mode_selection)
+modes:\
+ios::out : default setting, overwrites the file even existed
+ios::in  : overwrite char by char from the beinning of the file
+ios::app : append to the end of the file
+
 ostream << content_string
+
+
 
 More content will be add
