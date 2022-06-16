@@ -5,12 +5,14 @@ using namespace std;
 
 void writemultiline(void);
 void readwrittenfile(void);
+void append_existing_file(void);
 
 int main(){
 
     //writingtofile();
     //readwrittenfile();
-    writemultiline();
+    //writemultiline();
+    append_existing_file();
 
     return 0;
 
@@ -80,4 +82,36 @@ void readwrittenfile(void){
 
     return;
 
+}
+
+void append_existing_file(void){
+
+    string path = "student/text/practice3.txt";
+
+    try{
+        ofstream file;
+        // By default, ios::out, which overwrites the file
+        // ios::in, overwrite char by char from the file begin
+        file.open(path, ios::in);
+        if (!file) {
+            throw runtime_error("File failed to open");
+        }
+        string x;
+        cout << "Please enter text" << endl;
+        cin >> x;
+        file << x;
+        file.close();
+
+        ifstream stream;
+        stream.open(path);
+        string read;
+        cout << stream.rdbuf() << endl;
+        stream.close();
+    }
+
+    catch(exception & e){
+        cerr << e.what() << endl;
+    }
+
+    return;
 }
