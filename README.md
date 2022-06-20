@@ -48,6 +48,17 @@ ostream << content_string
 
 ### CSV file (Comma Separated Value)
 
+#### read csv
+ifstream_obj.open(path);
+getline(ifstream_obj, read_string, ',')
+
+#### print csv
+to better organize the printed content
+sets(width_int)
+left /right to set alignment
+using vector to store all elements
+see csvfile.cpp: print_csv_data
+
 
 
 #### More content will be add
