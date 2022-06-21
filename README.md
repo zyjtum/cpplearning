@@ -49,15 +49,21 @@ ostream << content_string
 ### CSV file (Comma Separated Value)
 
 #### read csv
-ifstream_obj.open(path);
-getline(ifstream_obj, read_string, ',')
+ifstream_obj.open(path);\
+getline(ifstream_obj, read_string, ',');\
 
 #### print csv
-to better organize the printed content
-sets(width_int)
-left /right to set alignment
-using vector to store all elements
-see csvfile.cpp: print_csv_data
+to better organize the printed content\
+sets(width_int)\
+left /right to set alignment\
+using vector to store all elements\
+see csvfile.cpp: print_csv_data\
+
+#### write to csv
+similar to write to file\
+ofstream_obj.open(path_string);\
+ofstream_obj << content1,content2, ... , \
+note betweent contents only one comma, no space!\
 
 
 
