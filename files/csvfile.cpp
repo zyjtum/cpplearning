@@ -7,15 +7,17 @@
 using namespace std;
 
 
-void read_csv(void);
+void read_csv();
 void ignore_the_head();
 void print_csv_data();
+void write_to_csv();
 
 int main(){
 
     //read_csv();
     //ignore_the_head();
-    print_csv_data();
+    //print_csv_data();
+    write_to_csv();
     return 0;
 }
 
@@ -110,5 +112,49 @@ void print_csv_data(void){
   catch(exception & e){
     cerr << e.what() << endl;
   }
+  return;
+}
+
+void write_to_csv(void){
+  string path = "student/csv/writepractice.csv";
+  vector<string> data;
+
+  try{
+    ofstream file;
+    file.open(path);
+    if(!file){
+      throw runtime_error("Write File failed to open.");
+    }
+    file << "Greeting,language"<< endl;
+    file << "Hello,English" << endl;
+    file << "Bonjour,French" <<endl;
+    file << "Hola,Spanish" << endl;
+    file << "Hallo,German" <<endl;
+    file.close();
+
+    ifstream file2;
+    file2.open(path);
+    string read;
+    while(getline(file2, read)){
+      stringstream ss(read);
+      while(getline(ss, read, ',')){
+        data.push_back(read);
+      }
+    }
+    file2.close();
+
+    for(int i=0; i< data.size(); i++){
+      if(i % 2 == 0){
+        cout << left << setw(20) << data.at(i);
+      }
+      else{
+        cout << setw(20) << data.at(i)<< endl;
+      }
+    }
+  }
+  catch(exception & e){
+    cerr << e.what() << endl;
+  }
+
   return;
 }
